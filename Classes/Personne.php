@@ -6,7 +6,7 @@
  * Date: 31/05/2017
  * Time: 08:53
  */
-class Personne {
+abstract class Personne {
 
     private $firstName = "Donald";
     protected $lastName = "Duck";
@@ -129,6 +129,15 @@ class Personne {
      */
     public function parler($message) {
         echo '<span>' . $message . '</span><br>';
+    }
+
+    abstract public function ecrire($message);
+
+    /**
+     * 
+     */
+    final public function DoNotExtend() {
+        echo "You shall not pass !";
     }
 
 }

@@ -64,4 +64,13 @@ class Stagiaire extends Personne {
         echo $this->getFirstName() . ', ' . $this->lastName;
     }
 
+    public function ecrire($message) {
+        echo $message;
+    }
+
+    /*
+      public function DoNotExtend() {
+      echo __METHOD__;
+      }
+     */
 }
