@@ -13,6 +13,8 @@
  */
 class Stagiaire extends Personne {
 
+    use Extrait;
+
     protected $formation = "";
     protected $evaluations;
 
