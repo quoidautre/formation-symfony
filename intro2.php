@@ -12,13 +12,15 @@ include 'Classes/Stagiaire.php';
 try {
     /////////////////////////////////////////////
     $stagiaire = new Stagiaire("Symfony2", "Fabrice");
+
+    $stagiaire->addEvaluation(['php', '14']);
+    $stagiaire->addEvaluation(['js', '8']);
+
+    //$stagiaire->addEvaluation(18);
+
     var_dump($stagiaire);
-
-    echo $stagiaire->parler("Hi there !");
-
-    echo $stagiaire->testVisibility();
-} catch (Exception $ex) {
-    echo "ERROR " . $ex->getMessage();
+} catch (Exception $e) {
+    echo $e->getMessage();
 }
 
 

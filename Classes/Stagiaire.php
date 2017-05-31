@@ -14,6 +14,7 @@
 class Stagiaire extends Personne {
 
     protected $formation = "";
+    protected $evaluations;
 
     public function __construct($formation, $prenom) {
         parent::__construct($prenom);
@@ -73,4 +74,40 @@ class Stagiaire extends Personne {
       echo __METHOD__;
       }
      */
+
+    /**
+     * 
+     * @return type
+     */
+    public function getEvaluations() {
+        return $this->evaluations;
+    }
+
+    /**
+     * 
+     * @param type $evaluations
+     * @return \Stagiaire
+     */
+    public function setEvaluations($evaluations) {
+        $this->evaluations[] = $evaluations;
+        return $this;
+    }
+
+    /**
+     * summary
+     *
+     * description
+     *
+     * @param string $myArgument *description* 
+     * 
+     * @return type
+     */
+    public function addEvaluation(array $evaluation = []) {
+
+        if (!is_array($evaluation))
+            throw new Exception(__METHOD__ . " : you must pass an array");
+
+        $this->setEvaluations($evaluation);
+    }
+
 }
