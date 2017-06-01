@@ -19,8 +19,10 @@ class BlogController extends \Lib\Controller {
      * @return type
      */
     public function indexAction() {
+        $article = [];
+        $comment = [];
         $this->render(
-                'blog/index.html.php', ['block1' => 'azerty', 'block2' => 'qwerty']
+                'blog/index.html.php', ['article' => $article, 'comment' => $comment]
         );
     }
 
