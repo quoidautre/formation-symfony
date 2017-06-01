@@ -1,0 +1,1 @@
+<section><?php echo $block1 . ' -- ' . $block2; ?></section>
