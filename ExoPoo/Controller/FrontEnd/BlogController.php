@@ -19,10 +19,12 @@ class BlogController extends \Lib\Controller {
      * @return type
      */
     public function indexAction() {
-        $article = [];
-        $comment = [];
+
+        $em = new \Model\ArticleManager();
+        $article = $em->getLastArticle();
+        //var_dump($article);
         $this->render(
-                'blog/index.html.php', ['article' => $article, 'comment' => $comment]
+                'blog/index.html.php', ['article' => $article]
         );
     }
 
