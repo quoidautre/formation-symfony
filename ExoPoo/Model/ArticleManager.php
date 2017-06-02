@@ -17,8 +17,8 @@ class ArticleManager extends \Lib\EntityManager {
      * @return \Model\ArticleManager
      */
     public function getLastArticle(int $number = 3) {
-        $sqlGetArticles = "SELECT * FROM " . $this->name . " ORDER BY date DESC LIMIT :number";
-        $sth = $this->factory->prepare($sqlGetArticles);
+        $sql = "SELECT * FROM " . $this->name . " ORDER BY date DESC LIMIT :number";
+        $sth = $this->factory->prepare($sql);
 
         $sth->bindValue(':number', (int) $number, \PDO::PARAM_INT);
         $sth->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, Article::class);
@@ -33,8 +33,8 @@ class ArticleManager extends \Lib\EntityManager {
      * @return \Model\ArticleManager
      */
     public function getById($id) {
-        $sqlGetArticle = "SELECT * FROM " . $this->name . " WHERE id = :id";      //:number";
-        $sth = $this->factory->prepare($sqlGetArticle);
+        $sql = "SELECT * FROM " . $this->name . " WHERE id = :id";      //:number";
+        $sth = $this->factory->prepare($sql);
 
         $sth->bindValue(':id', $id);
         $sth->setFetchMode(\PDO::FETCH_CLASS | \PDO::FETCH_PROPS_LATE, Article::class);
