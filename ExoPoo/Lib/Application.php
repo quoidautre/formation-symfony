@@ -12,6 +12,7 @@ abstract class Application {
     protected $layout;
     protected $name;
 
+    // according apache vhost
     const WEB_ROOT = '';
 
     //////////////////
