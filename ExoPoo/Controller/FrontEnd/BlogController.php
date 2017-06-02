@@ -28,4 +28,20 @@ class BlogController extends \Lib\Controller {
         );
     }
 
+    /**
+     * 
+     */
+    public function detailAction() {
+        if ((int) $_GET['id']) {
+            $em = new \Model\ArticleManager();
+            $article = $em->getById((int) $_GET['id']);
+
+            $this->render(
+                    'blog/detail.html.php', ['article' => $article]
+            );
+        } else {
+            throw new \Exception("ERROR : You must specify an id");
+        }
+    }
+
 }
