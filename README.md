@@ -1,17 +1,17 @@
 # formation-symfony
 
-Révisions PHP:
+### Révisions PHP:
 
 - Tous les fichiers sauf les dossiers MVC et ExoPoo
 
-Première version de MVC : 
+### Première version de MVC : 
 - /MVC
 
-Deuxième version de MVC : 
+### Deuxième version de MVC : 
 - /ExoPoo
 
 -----------------------
-Dump de la BDD :
+### Dump de la BDD :
 ```
 -- phpMyAdmin SQL Dump
 -- version 4.7.0
@@ -154,7 +154,12 @@ COMMIT;
 
 ```
 
-Virtual Host APACHE
+### Virtual Host APACHE
+
+* Modifier le fichier hosts (en mode Adminsitrateur). 
+- Sous Window$ : C:\Windows\System32\drivers\etc\hosts
+- Linux : /etc/hosts
+
 
 ```
 
